@@ -1,6 +1,6 @@
 'use client'
 
-import { redirect, usePathname } from 'next/navigation'
+import { redirect, usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import { Dog, LayoutDashboard, Users, MessageSquare, Package, Menu, X, LogOut, ChevronRight } from 'lucide-react'
@@ -11,31 +11,42 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     const [isAdmin, setIsAdmin] = useState<boolean | null>(null)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const pathname = usePathname()
+    const router = useRouter()
 
     useEffect(() => {
-        async function checkAdmin() {
-            const supabase = createClient()
-            const { data: { session } } = await supabase.auth.getSession()
+        const supabase = createClient()
 
+        async function getInitialSession() {
+            const { data: { session } } = await supabase.auth.getSession()
             if (!session) {
-                window.location.href = '/login'
+                router.replace('/login')
                 return
             }
 
-            const { data: user } = await supabase
+            const { data: user, error } = await supabase
                 .from('users')
                 .select('role')
                 .eq('id', session.user.id)
                 .single()
 
-            if (user?.role === 'admin') {
-                setIsAdmin(true)
+            if (error || user?.role !== 'admin') {
+                router.replace('/')
             } else {
-                window.location.href = '/'
+                setIsAdmin(true)
             }
         }
-        checkAdmin()
-    }, [])
+
+        getInitialSession()
+
+        // Subscription for auth changes
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+            if (event === 'SIGNED_OUT' || !session) {
+                router.replace('/login')
+            }
+        })
+
+        return () => subscription.unsubscribe()
+    }, [router])
 
     if (isAdmin === null) return <div className="min-h-screen flex items-center justify-center bg-[#fdfbf7] text-gray-500 font-serif">Verifying access...</div>
 

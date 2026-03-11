@@ -44,7 +44,7 @@ export default function ContactPage() {
                 />
             </div>
 
-            <div className="bg-primary-950 pb-20 pt-6 rounded-b-[3rem] shadow-xl relative z-10">
+            <div className="bg-primary-950 pb-20 pt-6 rounded-b-[3rem] shadow-xl relative z-40">
                 <Navbar />
                 <div className="max-w-4xl mx-auto px-6 mt-16 text-center text-white">
                     <h1 className="text-5xl md:text-7xl font-serif mb-6 drop-shadow-lg tracking-wide">Get In Touch</h1>

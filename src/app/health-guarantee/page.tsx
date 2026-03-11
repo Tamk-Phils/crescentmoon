@@ -4,7 +4,7 @@ import { ShieldCheck, Stethoscope, FileSignature } from 'lucide-react'
 export default function HealthGuaranteePage() {
     return (
         <main className="min-h-screen w-full relative overflow-x-hidden flex flex-col bg-[#fdfbf7]">
-            <div className="bg-primary-950 pb-16 pt-6 rounded-b-[3rem] shadow-xl relative z-10">
+            <div className="bg-primary-950 pb-16 pt-6 rounded-b-[3rem] shadow-xl relative z-40">
                 <Navbar />
                 <div className="max-w-4xl mx-auto px-6 mt-12 text-center text-white">
                     <h1 className="text-4xl md:text-6xl font-serif mb-4 drop-shadow-lg tracking-wide">Health Guarantee</h1>

@@ -29,20 +29,25 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://crescentmoonspaniels.com'), // Replace with actual domain when live
+  metadataBase: new URL('https://oncocker.netlify.app'),
   alternates: {
     canonical: '/',
+  },
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
   openGraph: {
     title: 'Crescent Moon Cocker Spaniels | Premium Breeder',
     description: 'Top-quality Cocker Spaniel puppies for sale. Healthy, home-raised, and socialized spaniels from champion bloodlines.',
-    url: 'https://crescentmoonspaniels.com',
+    url: 'https://oncocker.netlify.app',
     siteName: 'Crescent Moon Cocker Spaniels',
     images: [
       {
         url: '/logo.png',
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
         alt: 'Crescent Moon Cocker Spaniels Logo',
       },
     ],
