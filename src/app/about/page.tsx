@@ -32,9 +32,9 @@ export default function AboutPage() {
                         <div className="relative w-full aspect-[4/5]">
                             <div className="w-full h-full relative p-4">
                                 <img
-                                    src="https://images.unsplash.com/photo-1610474660855-32e67df66e37?w=800&q=80"
-                                    alt="A happy English Cocker Spaniel puppy from Crescent Moon"
-                                    className="w-full h-full object-cover rounded-[2rem]"
+                                    src="/images/about_hero.png"
+                                    alt="A beautiful English Cocker Spaniel puppy at Crescent Moon"
+                                    className="w-full h-full object-cover rounded-[2rem] shadow-2xl"
                                 />
                             </div>
                         </div>
