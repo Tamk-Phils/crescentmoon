@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-primary-50: #f5f3f7;
+  --color-primary-100: #e8e4xce;
+  --color-primary-200: #d6cfdf;
+  --color-primary-300: #bfaedc;
+  --color-primary-400: #a58cc8;
+  --color-primary-500: #8b68b3;
+  --color-primary-600: #75519d;
+  --color-primary-700: #624383;
+  --color-primary-800: #543b6e;
+  --color-primary-900: #302042;
+  --color-primary-950: #1b1025;
+
+  --color-accent-blue: #4b3e8e;
+  --color-accent-green: #b2d3c2;
+  --color-accent-sand: #fdfbf7;
+
+  --color-background: var(--color-accent-sand);
+  --color-foreground: #1c1917;
+}
+
+@layer base {
+  :root {
+    --background: 60 30% 98%;
+    /* warm white / sand */
+    --foreground: 20 14% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 4%;
+    --primary: 260 50% 55%;
+    --primary-foreground: 60 9% 98%;
+    --secondary: 153 30% 76%;
+    /* soft green */
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9% 98%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 260 50% 55%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom utility for the arched image style from the design */
+.arched-image {
+  border-radius: 1000px 1000px 0 0;
+}
