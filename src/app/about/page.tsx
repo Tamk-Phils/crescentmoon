@@ -96,7 +96,7 @@ export default function AboutPage() {
                     <div className="order-1 md:order-2">
                         <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                             <img
-                                src="https://images.unsplash.com/photo-1628102431526-9f33b1e326c5?w=800&q=80"
+                                src="/images/puppies_clover.png"
                                 alt="Cocker Spaniel puppies playing in our lush clover fields"
                                 className="w-full h-full object-cover"
                             />
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 <h3 className="text-primary-600 font-semibold tracking-widest uppercase text-sm mb-4">Meet the Breeder</h3>
                 <h2 className="text-4xl font-serif text-primary-950 mb-8">Hi, I'm Ellie</h2>
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-md mb-8 border-4 border-white">
-                    <img src="https://images.unsplash.com/photo-1601412438531-5916ed331c35?w=800&q=80" alt="Ellie, the dedicated Cocker Spaniel breeder at Crescent Moon" className="w-full h-full object-cover" />
+                    <img src="/images/ellie_profile.png" alt="Ellie, the dedicated Cocker Spaniel breeder at Crescent Moon" className="w-full h-full object-cover" />
                 </div>
                 <p className="text-gray-700 leading-relaxed text-lg mb-6 max-w-2xl mx-auto">
                     Breeding Cocker Spaniels has been the greatest joy of my life. I am intensely passionate about the health, genetics, and conformation of this breed. I spend countless hours researching pedigrees, studying genetic health testing, and consulting with reproductive specialists to ensure every Crescent Moon puppy is structurally and mentally sound.
