@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: '%s | Crescent Moon Cocker Spaniels'
   },
   description: 'Top-quality Cocker Spaniel puppies for sale. Healthy, home-raised, and socialized spaniels from champion bloodlines. Join the Crescent Moon family today!',
-  keywords: ['Cocker Spaniel', 'Spaniel Puppies', 'English Cocker Spaniel', 'Dog Breeder', 'Puppies for sale', 'Crescent Moon'],
+  keywords: ['Cocker Spaniel', 'Spaniel Puppies', 'Dog Breeder', 'Puppies for sale', 'Crescent Moon'],
   authors: [{ name: 'Crescent Moon Spaniels' }],
   creator: 'Crescent Moon Spaniels',
   publisher: 'Crescent Moon Spaniels',

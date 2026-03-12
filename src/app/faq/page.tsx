@@ -94,7 +94,6 @@ export default function FAQPage() {
                             <h4 className="font-medium text-lg mb-4 text-white/90">Contact</h4>
                             <ul className="space-y-3 text-gray-300">
                                 <li>hello@crescentmoonspaniels.com</li>
-                                <li>(555) 123-4567</li>
                             </ul>
                         </div>
                     </div>

@@ -33,7 +33,7 @@ export default function AboutPage() {
                             <div className="w-full h-full relative p-4">
                                 <img
                                     src="/images/about_hero.png"
-                                    alt="A beautiful English Cocker Spaniel puppy at Crescent Moon"
+                                    alt="A beautiful Cocker Spaniel puppy at Crescent Moon"
                                     className="w-full h-full object-cover rounded-[2rem] shadow-2xl"
                                 />
                             </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 <h3 className="text-primary-600 font-semibold tracking-widest uppercase text-sm mb-4">Meet the Breeder</h3>
                 <h2 className="text-4xl font-serif text-primary-950 mb-8">Hi, I'm Ellie</h2>
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-md mb-8 border-4 border-white">
-                    <img src="https://images.unsplash.com/photo-1601412438531-5916ed331c35?w=800&q=80" alt="Ellie, the dedicated English Cocker Spaniel breeder at Crescent Moon" className="w-full h-full object-cover" />
+                    <img src="https://images.unsplash.com/photo-1601412438531-5916ed331c35?w=800&q=80" alt="Ellie, the dedicated Cocker Spaniel breeder at Crescent Moon" className="w-full h-full object-cover" />
                 </div>
                 <p className="text-gray-700 leading-relaxed text-lg mb-6 max-w-2xl mx-auto">
                     Breeding Cocker Spaniels has been the greatest joy of my life. I am intensely passionate about the health, genetics, and conformation of this breed. I spend countless hours researching pedigrees, studying genetic health testing, and consulting with reproductive specialists to ensure every Crescent Moon puppy is structurally and mentally sound.
@@ -157,7 +157,6 @@ export default function AboutPage() {
                             <h4 className="font-medium text-lg mb-4 text-white/90">Contact</h4>
                             <ul className="space-y-3 text-gray-300">
                                 <li>hello@crescentmoonspaniels.com</li>
-                                <li>(555) 123-4567</li>
                             </ul>
                         </div>
                     </div>

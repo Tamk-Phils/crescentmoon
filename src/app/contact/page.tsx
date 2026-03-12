@@ -73,15 +73,6 @@ export default function ContactPage() {
                                 </div>
                                 <div className="flex gap-4 items-start">
                                     <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center text-primary-600 shrink-0">
-                                        <Phone className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm text-gray-500 font-medium">Call Us</p>
-                                        <p className="text-gray-900">(555) 123-4567</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4 items-start">
-                                    <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center text-primary-600 shrink-0">
                                         <MapPin className="w-5 h-5" />
                                     </div>
                                     <div>
@@ -203,7 +194,6 @@ export default function ContactPage() {
                             <h4 className="font-medium text-lg mb-4 text-white/90">Contact</h4>
                             <ul className="space-y-3 text-gray-300">
                                 <li>hello@crescentmoonspaniels.com</li>
-                                <li>(555) 123-4567</li>
                             </ul>
                         </div>
                     </div>

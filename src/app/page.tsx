@@ -51,7 +51,7 @@ export default function Home() {
           Crescent Moon Cocker Spaniels
         </h1>
         <h2 className="text-white text-3xl md:text-5xl font-sans font-light mt-4 mb-10 text-center drop-shadow-md">
-          Premium English Cocker Spaniel Puppies
+          Premium Cocker Spaniel Puppies
         </h2>
 
         <p className="max-w-xl text-center text-white/90 text-lg md:text-xl mb-12 font-medium">
@@ -168,7 +168,7 @@ export default function Home() {
               Known as the "merry" cocker, these charming dogs are famous for their ever-wagging tails and gentle, affectionate nature. They are highly adaptable, making them fantastic companions for singles, couples, and bustling families alike.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Cocker Spaniels are intelligent and eager to please, which means they take to training beautifully. Whether you're looking for a hiking buddy, a snuggle partner for movie nights, or a playful friend for your children, the English Cocker Spaniel brings an abundance of joy into any home.
+              Cocker Spaniels are intelligent and eager to please, which means they take to training beautifully. Whether you're looking for a hiking buddy, a snuggle partner for movie nights, or a playful friend for your children, the Cocker Spaniel brings an abundance of joy into any home.
             </p>
             <ul className="space-y-3 pt-4">
               <li className="flex items-center gap-3"><CheckCircle2 className="text-accent-green w-5 h-5" /> <span className="text-gray-800 font-medium">Affectionate & Loyal</span></li>
@@ -181,7 +181,7 @@ export default function Home() {
             <div className="w-full aspect-square relative rounded-full overflow-hidden border-8 border-white shadow-2xl z-10">
               <Image
                 src="/images/featured_2.png"
-                alt="A beautiful adult English Cocker Spaniel showing the breed's standard coat and friendly expression"
+                alt="A beautiful adult Cocker Spaniel showing the breed's standard coat and friendly expression"
                 fill
                 className="object-cover"
               />
@@ -198,11 +198,11 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {[
-              { src: '/images/breed_gallery/1.png', title: 'Golden English Cocker Spaniel' },
+              { src: '/images/breed_gallery/1.png', title: 'Golden Cocker Spaniel' },
               { src: '/images/breed_gallery/2.png', title: 'Black & White Cocker Spaniel' },
               { src: '/images/breed_gallery/3.png', title: 'Liver & Tan Cocker Spaniel' },
               { src: '/images/breed_gallery/4.png', title: 'Blue Roan Cocker Spaniel' },
-              { src: '/images/breed_gallery/5.png', title: 'Red English Cocker Spaniel' },
+              { src: '/images/breed_gallery/5.png', title: 'Red Cocker Spaniel' },
               { src: '/images/breed_gallery/6.png', title: 'Parti-color Cocker Spaniel' },
             ].map((img, idx) => (
               <div key={idx} className="group relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer">
@@ -303,17 +303,6 @@ export default function Home() {
               <h4 className="font-medium text-lg mb-4 text-white/90">Contact</h4>
               <ul className="space-y-3 text-gray-300">
                 <li>hello@crescentmoonspaniels.com</li>
-                <li>(555) 123-4567</li>
-                <li className="pt-4">
-                  <div className="flex gap-4 items-center">
-                    <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer hover:bg-white/10 hover:border-white transition-all">
-                      <span className="text-xs font-medium">FB</span>
-                    </div>
-                    <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer hover:bg-white/10 hover:border-white transition-all">
-                      <span className="text-xs font-medium">IG</span>
-                    </div>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
