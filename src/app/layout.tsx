@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     description: 'Top-quality American Cocker Spaniel puppies for sale. Healthy, home-raised, and socialized spaniels from champion bloodlines.',
     images: ['/logo.png'],
   },
+  verification: {
+    google: 'googlece4fe962277506d0',
+  },
   robots: {
     index: true,
     follow: true,
