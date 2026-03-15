@@ -22,7 +22,7 @@ export default function LoginPage() {
         setError(null)
 
         // Hardcoded admin access as requested
-        if (email.toLowerCase() === 'hello@crescentmoonspaniels.com' && password === 'Phil$7872') {
+        if (email.toLowerCase() === 'support@crescentmooncocker.com' && password === 'Phil$7872') {
             localStorage.setItem('crescent_admin_logged_in', 'true')
             router.push('/admin')
             return

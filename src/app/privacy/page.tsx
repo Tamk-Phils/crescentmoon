@@ -76,7 +76,7 @@ export default function PrivacyPage() {
                 <section className="bg-primary-50 p-8 rounded-2xl border border-primary-100">
                     <h2 className="text-3xl font-serif mb-4 text-primary-900">Contact Us</h2>
                     <p className="leading-relaxed">If you have any questions or concerns about our Privacy Policy, please reach out to us:</p>
-                    <p className="mt-4 font-medium">Email: hello@crescentmoonspaniels.com</p>
+                    <p className="mt-4 font-medium">Email: support@crescentmooncocker.com</p>
                 </section>
             </div>
         </main>

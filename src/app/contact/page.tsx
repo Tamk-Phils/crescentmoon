@@ -68,7 +68,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 font-medium">Email Us</p>
-                                        <p className="text-gray-900">hello@crescentmoonspaniels.com</p>
+                                        <p className="text-gray-900">support@crescentmooncocker.com</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-4 items-start">
@@ -193,7 +193,7 @@ export default function ContactPage() {
                         <div>
                             <h4 className="font-medium text-lg mb-4 text-white/90">Contact</h4>
                             <ul className="space-y-3 text-gray-300">
-                                <li>hello@crescentmoonspaniels.com</li>
+                                <li>support@crescentmooncocker.com</li>
                             </ul>
                         </div>
                     </div>

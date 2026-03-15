@@ -10,7 +10,7 @@ DECLARE
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM public.users WHERE id = admin_id) THEN
         INSERT INTO public.users (id, email, full_name, role)
-        VALUES (admin_id, 'hello@crescentmoonspaniels.com', 'Sanctuary Admin', 'admin');
+        VALUES (admin_id, 'support@crescentmooncocker.com', 'Sanctuary Admin', 'admin');
     END IF;
 END $$;
 

@@ -143,13 +143,20 @@ export default function ChatPage() {
             // Replace optimistic message with the real one from DB (to get the real ID)
             setMessages(prev => prev.map(m => m.id === tempId ? data : m))
 
+            // Get user info for notification
+            const { data: userData } = await supabase.from('users').select('email, full_name').eq('id', userId).single()
+
             // Notify admin of new message
             fetch('/api/notify-admin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     type: 'chat',
-                    data: { content: msgText }
+                    data: {
+                        content: msgText,
+                        senderName: userData?.full_name || 'Anonymous User',
+                        senderEmail: userData?.email || ''
+                    }
                 })
             }).catch(e => console.error("Chat notification failed:", e))
         }

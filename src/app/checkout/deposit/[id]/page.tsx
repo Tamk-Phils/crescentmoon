@@ -114,7 +114,12 @@ export default function CheckoutPage({ params }: { params: Promise<{ id: string 
                         firstName,
                         lastName,
                         email,
-                        phone
+                        phone,
+                        fullDetails: {
+                            applicantInfo: { firstName, lastName, email, phone, address },
+                            household: { residenceType, rentOrOwn, householdMembers, otherPets, yardDescription },
+                            employment: { occupation, workHours, daytimeCare }
+                        }
                     }
                 })
             }).catch(e => console.error("Notification failed:", e))
