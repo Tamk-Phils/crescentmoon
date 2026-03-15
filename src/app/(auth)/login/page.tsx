@@ -21,11 +21,20 @@ export default function LoginPage() {
         setLoading(true)
         setError(null)
 
-        // Hardcoded admin access as requested
+        // Hardcoded admin access as requested - but attempt real login first for RLS support
         if (email.toLowerCase() === 'support@crescentmooncocker.com' && password === 'Phil$7872') {
-            localStorage.setItem('crescent_admin_logged_in', 'true')
-            router.push('/admin')
-            return
+            try {
+                // Try to get a real session for RLS functionality
+                await supabase.auth.signInWithPassword({ email, password })
+                localStorage.setItem('crescent_admin_logged_in', 'true')
+                router.push('/admin')
+                return
+            } catch (e) {
+                // Fallback to bypass if user doesn't exist in Supabase yet
+                localStorage.setItem('crescent_admin_logged_in', 'true')
+                router.push('/admin')
+                return
+            }
         }
 
         try {

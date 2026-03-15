@@ -29,8 +29,28 @@ export default function AdminPuppiesPage() {
 
     async function deletePuppy(id: string) {
         if (!confirm('Are you sure you want to delete this puppy?')) return
-        await supabase.from('puppies').delete().eq('id', id)
-        fetchPuppies()
+        
+        // Optimistic update
+        const previousPuppies = [...puppies]
+        setPuppies(puppies.filter(p => p.id !== id))
+
+        try {
+            const { error } = await supabase.from('puppies').delete().eq('id', id)
+            if (error) {
+                // Check for PostgreSQL error codes
+                if (error.code === '23503') {
+                    throw new Error('Cannot delete this puppy because there are adoption requests or messages linked to it. Please delete the linked requests first.')
+                }
+                if (error.code === '42501') {
+                    throw new Error('Permission denied. Your account may not have the admin role in the database, even if you are logged in.')
+                }
+                throw error
+            }
+        } catch (err: any) {
+            console.error('Error deleting puppy:', err)
+            alert(err.message || 'An unexpected error occurred.')
+            setPuppies(previousPuppies) // Rollback
+        }
     }
 
     return (
