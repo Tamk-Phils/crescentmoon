@@ -260,20 +260,26 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-serif text-primary-950">Hear From Our Adopters</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-gray-800">
-            <div className="bg-white rounded-3xl p-8 shadow-sm">
-              <ThumbsUp className="w-8 h-8 text-primary-400 mx-auto mb-4" />
-              <p className="italic mb-6">"We adopted our sweet Bella from Crescent Moon last year, and she has completely transformed our home. Her temperament is incredibly gentle and wonderfully smart."</p>
-              <p className="font-serif text-primary-900 font-medium">— The Harrison Family, TX</p>
+            <div className="bg-white rounded-3xl p-8 shadow-sm flex flex-col items-center">
+              <div className="relative w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-primary-50">
+                <Image src="/images/testimonials/family_1.png" alt="Happy family with puppy" fill className="object-cover" />
+              </div>
+              <p className="italic mb-6 text-gray-600">"We adopted our sweet Bella from Crescent Moon last year, and she has completely transformed our home. Her temperament is incredibly gentle and wonderfully smart."</p>
+              <p className="font-serif text-primary-950 font-medium">— The Harrison Family</p>
             </div>
-            <div className="bg-accent-green/20 rounded-3xl p-8 shadow-sm scale-105 transform">
-              <ThumbsUp className="w-8 h-8 text-primary-600 mx-auto mb-4" />
+            <div className="bg-white rounded-3xl p-8 shadow-sm scale-105 transform border-2 border-primary-100 flex flex-col items-center z-10">
+              <div className="relative w-28 h-28 rounded-full overflow-hidden mb-6 border-4 border-primary-100">
+                <Image src="/images/testimonials/owner_2.png" alt="Happy puppy owner" fill className="object-cover" />
+              </div>
               <p className="italic mb-6 font-medium text-gray-900">"The best breeder we have ever worked with! Our puppy arrived perfectly healthy and practically potty-trained. They answered every question we had and made the entire process so very special."</p>
-              <p className="font-serif text-primary-950 font-medium text-lg">— Sarah & Mark J., FL</p>
+              <p className="font-serif text-primary-950 font-medium text-lg">— Sarah & Mark J.</p>
             </div>
-            <div className="bg-white rounded-3xl p-8 shadow-sm">
-              <ThumbsUp className="w-8 h-8 text-primary-400 mx-auto mb-4" />
-              <p className="italic mb-6">"Charlie is the light of our lives! He has such a calm and loving demeanor. It's obvious he was raised inside a loving home and socialized early. Highly recommend."</p>
-              <p className="font-serif text-primary-900 font-medium">— The Miller Family, NY</p>
+            <div className="bg-white rounded-3xl p-8 shadow-sm flex flex-col items-center">
+              <div className="relative w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-primary-50">
+                <Image src="/images/testimonials/couple_3.png" alt="Happy couple with puppy" fill className="object-cover" />
+              </div>
+              <p className="italic mb-6 text-gray-600">"Charlie is the light of our lives! He has such a calm and loving demeanor. It's obvious he was raised inside a loving home and socialized early. Highly recommend."</p>
+              <p className="font-serif text-primary-950 font-medium">— The Miller Family</p>
             </div>
           </div>
         </div>
