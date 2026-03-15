@@ -58,6 +58,65 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return () => subscription.unsubscribe()
     }, [router])
 
+    useEffect(() => {
+        if (!isAdmin) return
+
+        const checkServiceExpirations = async () => {
+            const supabase = createClient()
+            
+            // 1. Fetch services near expiry that haven't been alerted recently
+            const { data: services } = await supabase
+                .from('service_tracking')
+                .select('*')
+
+            if (!services) return
+
+            const today = new Date()
+            const oneWeekAgo = new Date(today.getTime() - (7 * 24 * 60 * 60 * 1000))
+
+            for (const service of services) {
+                const expiryDate = new Date(service.expiry_date)
+                const diffTime = expiryDate.getTime() - today.getTime()
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+
+                // If within threshold and not alerted in the last week
+                const shouldAlert = diffDays <= service.alert_threshold_days && 
+                                   (!service.last_alert_sent_at || new Date(service.last_alert_sent_at) < oneWeekAgo)
+
+                if (shouldAlert) {
+                    console.log(`Triggering alert for ${service.service_name}...`)
+                    
+                    try {
+                        const response = await fetch('/api/notify-admin', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                type: 'system',
+                                data: {
+                                    subject: `${service.service_name} expiring soon!`,
+                                    message: `Your ${service.service_name} subscription will expire on ${service.expiry_date}.`,
+                                    details: `There are only ${diffDays} days remaining. Please renew this service to avoid interruption.`
+                                }
+                            })
+                        })
+
+                        if (response.ok) {
+                            // Update last_alert_sent_at
+                            await supabase
+                                .from('service_tracking')
+                                .update({ last_alert_sent_at: new Date().toISOString() })
+                                .eq('id', service.id)
+                        }
+                    } catch (err) {
+                        console.error('Failed to send service alert:', err)
+                    }
+                }
+            }
+        }
+
+        checkServiceExpirations()
+    }, [isAdmin])
+
     if (isAdmin === null) return <div className="min-h-screen flex items-center justify-center bg-[#fdfbf7] text-gray-500 font-serif">Verifying access...</div>
 
     const navItems = [

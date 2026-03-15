@@ -87,6 +87,20 @@ export async function POST(req: NextRequest) {
           </p>
         `;
                 break;
+            
+            case 'system':
+                subject = `⚠️ SYSTEM ALERT: ${data.subject}`;
+                html = `
+          <p>A system alert has been triggered:</p>
+          <div style="background: #fff7ed; padding: 20px; border-radius: 8px; border-left: 4px solid #ea580c; color: #9a3412;">
+            <p><strong>${data.message}</strong></p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Details: ${data.details || 'No additional details.'}</p>
+          </div>
+          <p style="text-align: center; margin-top: 30px;">
+            <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://crescentmooncocker.com'}/admin" class="btn">Login to Admin Portal</a>
+          </p>
+        `;
+                break;
 
             default:
                 return NextResponse.json({ error: 'Invalid notification type' }, { status: 400 });
