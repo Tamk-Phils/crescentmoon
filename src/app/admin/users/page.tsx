@@ -105,26 +105,26 @@ export default function AdminUsersPage() {
                                             {new Date(user.created_at).toLocaleDateString()}
                                         </td>
                                         <td className="px-6 py-4 text-right">
-                                            <div className="flex justify-end gap-1">
+                                            <div className="flex justify-end gap-2">
                                                 <button
                                                     onClick={() => toggleRole(user.id, user.role)}
-                                                    className="text-primary-600 hover:text-primary-800 transition-colors font-medium px-2 py-1 rounded hover:bg-primary-50"
+                                                    className="text-primary-600 hover:text-primary-800 transition-colors font-medium px-3 py-2 rounded-lg hover:bg-primary-50 text-xs"
                                                 >
                                                     {user.role === 'admin' ? 'Revoke' : 'Promote'}
                                                 </button>
                                                 <button
                                                     onClick={() => handleChatWithUser(user.id)}
-                                                    className="p-2 text-gray-400 hover:text-primary-600 rounded transition-colors"
+                                                    className="p-3 text-gray-400 hover:text-primary-600 rounded-lg transition-colors bg-gray-50 md:bg-transparent"
                                                     title="Chat with Profile"
                                                 >
-                                                    <MessageSquare className="w-4 h-4" />
+                                                    <MessageSquare className="w-5 h-5" />
                                                 </button>
                                                 <button
                                                     onClick={() => deleteUser(user.id)}
-                                                    className="p-2 text-gray-400 hover:text-red-600 rounded transition-colors"
+                                                    className="p-3 text-gray-400 hover:text-red-600 rounded-lg transition-colors bg-gray-50 md:bg-transparent"
                                                     title="Delete Profile"
                                                 >
-                                                    <Trash2 className="w-4 h-4" />
+                                                    <Trash2 className="w-5 h-5" />
                                                 </button>
                                             </div>
                                         </td>

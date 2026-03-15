@@ -115,15 +115,15 @@ export default function AdminPuppiesPage() {
                                             <div className="flex justify-end gap-2">
                                                 <Link
                                                     href={`/admin/puppies/edit/${puppy.id}`}
-                                                    className="p-2 text-gray-400 hover:text-primary-600 rounded transition-colors"
+                                                    className="p-3 text-gray-400 hover:text-primary-600 rounded-lg transition-colors bg-gray-50 md:bg-transparent"
                                                 >
-                                                    <Edit className="w-4 h-4" />
+                                                    <Edit className="w-5 h-5" />
                                                 </Link>
                                                 <button
                                                     onClick={() => deletePuppy(puppy.id)}
-                                                    className="p-2 text-gray-400 hover:text-red-600 rounded transition-colors"
+                                                    className="p-3 text-gray-400 hover:text-red-600 rounded-lg transition-colors bg-gray-50 md:bg-transparent"
                                                 >
-                                                    <Trash2 className="w-4 h-4" />
+                                                    <Trash2 className="w-5 h-5" />
                                                 </button>
                                             </div>
                                         </td>
