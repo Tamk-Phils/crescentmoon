@@ -71,16 +71,6 @@ export default function ContactPage() {
                                         <p className="text-gray-900">support@crescentmooncocker.com</p>
                                     </div>
                                 </div>
-                                <div className="flex gap-4 items-start">
-                                    <div className="w-10 h-10 rounded-full bg-primary-50 flex items-center justify-center text-primary-600 shrink-0">
-                                        <MapPin className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm text-gray-500 font-medium">Location</p>
-                                        <p className="text-gray-900">Portland, Oregon</p>
-                                        <p className="text-xs text-gray-400 mt-1">Visits by approved appointment only.</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 

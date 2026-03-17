@@ -19,14 +19,13 @@ export const metadata: Metadata = {
     default: 'Crescent Moon Cocker Spaniels | Premium American Cocker Spaniel Breeder',
     template: '%s | Crescent Moon Cocker Spaniels'
   },
-  description: 'Find your perfect American Cocker Spaniel puppy at Crescent Moon Sanctuary. We are premium breeders of healthy, socialized, and beautiful Cocker Spaniels from champion bloodlines. Based in Portland, Oregon with nationwide shipping.',
+  description: 'Find your perfect American Cocker Spaniel puppy at Crescent Moon Sanctuary. We are premium breeders of healthy, socialized, and beautiful Cocker Spaniels from champion bloodlines with nationwide shipping.',
   keywords: [
     'Cocker Spaniel', 
     'American Cocker Spaniel', 
     'Spaniel Puppies for Sale', 
-    'Cocker Spaniel Breeder Oregon', 
+    'Cocker Spaniel Breeder', 
     'Premium Dog Breeder', 
-    'Puppies for sale Portland', 
     'Crescent Moon Sanctuary',
     'Champion Bloodline Cocker Spaniels',
     'Socialized Puppies'
@@ -92,15 +91,10 @@ const jsonLd = {
   'address': {
     '@type': 'PostalAddress',
     'streetAddress': '',
-    'addressLocality': 'Portland',
-    'addressRegion': 'OR',
+    'addressLocality': '',
+    'addressRegion': '',
     'postalCode': '',
     'addressCountry': 'US'
-  },
-  'geo': {
-    '@type': 'GeoCoordinates',
-    'latitude': 45.5152,
-    'longitude': -122.6784
   },
   'openingHoursSpecification': {
     '@type': 'OpeningHoursSpecification',
