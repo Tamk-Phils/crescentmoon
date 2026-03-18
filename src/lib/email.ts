@@ -18,18 +18,18 @@ function getEmailTemplate(title: string, content: string) {
     <html>
       <head>
         <style>
-          body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #fdfbf7; }
-          .container { max-width: 600px; margin: 20px auto; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
-          .header { background: #4c1d95; color: #fff; padding: 30px; text-align: center; }
-          .header h1 { margin: 0; font-size: 24px; font-weight: 500; letter-spacing: 1px; }
-          .content { padding: 40px; }
+          body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1a1a1b; margin: 0; padding: 0; background-color: #fdfbf7; }
+          .container { max-width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eeeeee; }
+          .header { background-color: #4c1d95; color: #ffffff; padding: 30px; text-align: center; }
+          .header h1 { margin: 0; font-size: 24px; font-weight: 500; color: #ffffff; letter-spacing: 1px; }
+          .content { padding: 40px; color: #1a1a1b; background-color: #ffffff; }
           .content h2 { color: #4c1d95; margin-top: 0; font-size: 20px; border-bottom: 2px solid #f3f4f6; padding-bottom: 10px; }
-          .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-          .data-table td { padding: 12px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
-          .data-table td.label { font-weight: bold; color: #6b7280; width: 35%; font-size: 13px; text-transform: uppercase; }
-          .data-table td.value { color: #111827; }
-          .footer { background: #f9fafb; color: #9ca3af; padding: 20px; text-align: center; font-size: 12px; border-top: 1px solid #eee; }
-          .btn { display: inline-block; padding: 12px 24px; background: #4c1d95; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 500; margin-top: 20px; }
+          .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: #ffffff; }
+          .data-table td { padding: 12px; border-bottom: 1px solid #f3f4f6; vertical-align: top; color: #1a1a1b; }
+          .data-table td.label { font-weight: bold; color: #4b5563; width: 35%; font-size: 13px; text-transform: uppercase; }
+          .data-table td.value { color: #111827; font-weight: 500; }
+          .footer { background-color: #f9fafb; color: #6b7280; padding: 20px; text-align: center; font-size: 12px; border-top: 1px solid #eeeeee; }
+          .btn { display: inline-block; padding: 12px 24px; background-color: #4c1d95; color: #ffffff !important; text-decoration: none; border-radius: 6px; font-weight: 500; margin-top: 20px; }
         </style>
       </head>
       <body>

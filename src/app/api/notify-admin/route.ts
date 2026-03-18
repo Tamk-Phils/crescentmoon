@@ -21,8 +21,8 @@ export async function POST(req: NextRequest) {
             <tr><td class="label">Name</td><td class="value">${data.name}</td></tr>
             <tr><td class="label">Email</td><td class="value">${data.email}</td></tr>
           </table>
-          <p><strong>Message:</strong></p>
-          <div style="background: #f4f4f4; padding: 20px; border-radius: 8px; border-left: 4px solid #4c1d95;">
+          <p style="color: #4b5563; font-weight: bold; margin-bottom: 10px;">Message:</p>
+          <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; border-left: 4px solid #4c1d95; color: #111827; font-size: 16px; line-height: 1.6;">
             ${data.message.replace(/\n/g, '<br>')}
           </div>
         `;
@@ -78,8 +78,8 @@ export async function POST(req: NextRequest) {
           <table class="data-table">
             <tr><td class="label">Sender</td><td class="value">${data.senderName || 'User'} (${data.senderEmail || 'N/A'})</td></tr>
           </table>
-          <p><strong>Message:</strong></p>
-          <div style="background: #f4f4f4; padding: 20px; border-radius: 8px; border-left: 4px solid #4c1d95; font-style: italic;">
+          <p style="color: #4b5563; font-weight: bold; margin-bottom: 10px;">Message:</p>
+          <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; border-left: 4px solid #4c1d95; color: #111827; font-style: italic; font-size: 16px; line-height: 1.6;">
             "${data.content}"
           </div>
           <p style="text-align: center; margin-top: 30px;">
@@ -92,9 +92,9 @@ export async function POST(req: NextRequest) {
                 subject = `⚠️ SYSTEM ALERT: ${data.subject}`;
                 html = `
           <p>A system alert has been triggered:</p>
-          <div style="background: #fff7ed; padding: 20px; border-radius: 8px; border-left: 4px solid #ea580c; color: #9a3412;">
-            <p><strong>${data.message}</strong></p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Details: ${data.details || 'No additional details.'}</p>
+          <div style="background-color: #fff7ed; padding: 20px; border-radius: 8px; border-left: 4px solid #ea580c; color: #7c2d12;">
+            <p style="margin: 0; font-weight: bold; font-size: 16px;">${data.message}</p>
+            <p style="margin-top: 10px; font-size: 14px; color: #9a3412;">Details: ${data.details || 'No additional details.'}</p>
           </div>
           <p style="text-align: center; margin-top: 30px;">
             <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'https://crescentmooncocker.com'}/admin" class="btn">Login to Admin Portal</a>
