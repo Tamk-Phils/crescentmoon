@@ -8,7 +8,7 @@ import { PawPrint } from 'lucide-react'
 // Let's create a server helper or just fetch directly if we only need public data.
 // Since RLS allows anyone to view available puppies, we can use the regular Supabase REST API or just the browser client inside the server component if we don't need auth cookies for this specific fetch, but it's better to maintain pattern.
 // For simplicity in this demo, since 'available' is public, using the standard client is fine.
-export const revalidate = 0 // Disable caching for realtime updates
+export const revalidate = 3600 // Cache for 1 hour to prevent high egress
 
 export default async function BrowsePage() {
     const supabase = createClient()

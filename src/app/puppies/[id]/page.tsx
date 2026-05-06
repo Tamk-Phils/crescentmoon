@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 import { Carousel } from '@/components/ui/carousel'
 import { Metadata } from 'next'
 
-export const revalidate = 0
+export const revalidate = 3600 // Cache for 1 hour to prevent high egress
 
 type Props = {
     params: Promise<{ id: string }>
